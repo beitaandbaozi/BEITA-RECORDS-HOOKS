@@ -2,17 +2,30 @@
   <div class="beita-layout">
     <!-- 共享屏幕，获得Stream流媒体，录屏为mp4文件 -->
     <div class="group">
-      <div class="btn">共享屏幕</div>
+      <div class="btn" @click="handleShareScreen">共享屏幕</div>
+    </div>
+    <div class="options">
+      <RouterView />
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { RouterView } from "vue-router";
+import { useRouter } from "vue-router";
+const router = useRouter();
+const goToUrl = (url: string) => {
+  router.push(url);
+};
+const handleShareScreen = () => {
+  goToUrl("/share-screen");
+};
+</script>
 
 <style scoped>
 .beita-layout {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: lightgoldenrodyellow;
 }
 
@@ -28,5 +41,10 @@
   text-align: center;
   background-color: lightblue;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.options {
+  margin: 20px;
 }
 </style>
