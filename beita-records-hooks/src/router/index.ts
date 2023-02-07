@@ -1,13 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+const BeitaLayout = () => import("../views/BeitaLayout.vue");
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    // {
-    //   path: "/",
-    //   name: "home",
-    //   component: HomeView,
-    // },
+    {
+      path: "/",
+      name: "layout",
+      component: BeitaLayout,
+    },
     // {
     //   path: "/about",
     //   name: "about",
