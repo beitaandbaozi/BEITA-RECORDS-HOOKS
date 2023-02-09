@@ -3,6 +3,7 @@
     <!-- 共享屏幕，获得Stream流媒体，录屏为mp4文件 -->
     <div class="group">
       <div class="btn" @click="handleShareScreen">共享屏幕</div>
+      <div class="btn" @click="handleVideoRecord">语音录制</div>
     </div>
     <div class="options">
       <RouterView />
@@ -17,8 +18,13 @@ const router = useRouter();
 const goToUrl = (url: string) => {
   router.push(url);
 };
+// 共享屏幕
 const handleShareScreen = () => {
   goToUrl("/share-screen");
+};
+// 语音录制
+const handleVideoRecord = () => {
+  goToUrl("/audio-record");
 };
 </script>
 
@@ -34,8 +40,10 @@ const handleShareScreen = () => {
   padding: 20px 0 0 20px;
 }
 .btn {
-  width: auto;
   padding: 20px;
+  margin-right: 20px;
+
+  width: auto;
   color: #fff;
   line-height: 10px;
   text-align: center;

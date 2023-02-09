@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-const BeitaLayout = () => import("../views/BeitaLayout.vue");
-const ShareScreen = () => import("../views/ShareScreen.vue");
+const BeitaLayout = () => import("@/views/BeitaLayout.vue");
+const ShareScreen = () => import("@/views/ShareScreen/ShareScreen.vue");
+const AudioRecord = () => import("@/views/AudioRecord/AudioRecord.vue");
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,6 +16,11 @@ const router = createRouter({
           path: "/share-screen",
           name: "share-screen",
           component: ShareScreen,
+        },
+        {
+          path: "/audio-record",
+          name: "audio-record",
+          component: AudioRecord,
         },
       ],
     },
