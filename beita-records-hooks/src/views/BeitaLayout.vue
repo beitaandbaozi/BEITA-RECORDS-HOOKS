@@ -4,6 +4,7 @@
     <div class="group">
       <div class="btn" @click="handleShareScreen">共享屏幕</div>
       <div class="btn" @click="handleVideoRecord">语音录制</div>
+      <div class="btn" @click="handleVideoRecordSecond">语音录制2</div>
     </div>
     <div class="options">
       <RouterView />
@@ -25,6 +26,10 @@ const handleShareScreen = () => {
 // 语音录制
 const handleVideoRecord = () => {
   goToUrl("/audio-record");
+};
+// 语音录制2
+const handleVideoRecordSecond = () => {
+  goToUrl("/audio-record-diff");
 };
 </script>
 

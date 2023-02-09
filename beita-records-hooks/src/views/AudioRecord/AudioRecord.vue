@@ -1,5 +1,5 @@
 <template>
-  <div class="video-record">
+  <div class="audio-record">
     <audio controls autoplay></audio>
     <div class="options">
       <div class="btn" @click="handleStartRecord">开始录制</div>
@@ -156,7 +156,7 @@ const writeUTFBytes = (view: DataView, offset: number, string: string) => {
 </script>
 
 <style scoped>
-.video-record {
+.audio-record {
   display: flex;
   flex-direction: column;
   justify-content: center;

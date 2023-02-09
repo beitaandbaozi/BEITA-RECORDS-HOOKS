@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from "vue-router";
 const BeitaLayout = () => import("@/views/BeitaLayout.vue");
 const ShareScreen = () => import("@/views/ShareScreen/ShareScreen.vue");
 const AudioRecord = () => import("@/views/AudioRecord/AudioRecord.vue");
+const AudioRecordDiff = () =>
+  import("@/views/AudioRecordDiff/AudioRecordDiff.vue");
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +23,11 @@ const router = createRouter({
           path: "/audio-record",
           name: "audio-record",
           component: AudioRecord,
+        },
+        {
+          path: "/audio-record-diff",
+          name: "audio-record-diff",
+          component: AudioRecordDiff,
         },
       ],
     },
