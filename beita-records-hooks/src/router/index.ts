@@ -5,7 +5,8 @@ const ShareScreen = () => import("@/views/ShareScreen/ShareScreen.vue");
 const AudioRecord = () => import("@/views/AudioRecord/AudioRecord.vue");
 const AudioRecordDiff = () =>
   import("@/views/AudioRecordDiff/AudioRecordDiff.vue");
-
+const VirtualListLoad = () =>
+  import("@/views/VirtualListLoad/virtual-list-load.vue");
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -28,6 +29,11 @@ const router = createRouter({
           path: "/audio-record-diff",
           name: "audio-record-diff",
           component: AudioRecordDiff,
+        },
+        {
+          path: "/virtual-list-load",
+          name: "virtual-list-load",
+          component: VirtualListLoad,
         },
       ],
     },

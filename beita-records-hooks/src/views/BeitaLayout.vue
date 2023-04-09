@@ -5,6 +5,7 @@
       <div class="btn" @click="handleShareScreen">共享屏幕</div>
       <div class="btn" @click="handleVideoRecord">语音录制</div>
       <div class="btn" @click="handleVideoRecordSecond">语音录制2</div>
+      <div class="btn" @click="handleVirtualListLoad">虚拟列表加载</div>
     </div>
     <div class="options">
       <RouterView />
@@ -30,6 +31,10 @@ const handleVideoRecord = () => {
 // 语音录制2
 const handleVideoRecordSecond = () => {
   goToUrl("/audio-record-diff");
+};
+// 虚拟列表加载
+const handleVirtualListLoad = () => {
+  goToUrl("/virtual-list-load");
 };
 </script>
 

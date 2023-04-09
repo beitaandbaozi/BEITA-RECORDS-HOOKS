@@ -46,7 +46,7 @@ const handleStopRecord = () => {
       chunks.value = [];
       const audioURL = window.URL.createObjectURL(blob);
 
-      document.querySelector("audio").src = audioURL;
+      document.querySelector("audio")!.src = audioURL;
 
       const a = document.createElement("a");
       a.href = audioURL;
